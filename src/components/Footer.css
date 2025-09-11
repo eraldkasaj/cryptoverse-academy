@@ -1,0 +1,65 @@
+.footer {
+  background-color: #201c24;
+  color: #bbb;
+  padding: 40px 20px 20px;
+  font-size: 0.95rem;
+}
+.footer-logo {
+  width: 120px;         /* madhësia e logos */
+  margin: 15px 0;       /* hapësirë sipër e poshtë */
+  display: block;       /* qëndron në një rresht veç */
+}
+
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-social .icons a {
+  color: #fbd334; /* verdha Binance */
+  margin-left: 15px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social .icons a:hover {
+  color: #fff;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.footer-links h6 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-links a {
+  display: block;
+  color: #bbb;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fbd334;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  color: #777;
+}

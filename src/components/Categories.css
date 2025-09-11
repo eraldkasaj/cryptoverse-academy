@@ -1,0 +1,18 @@
+.categories {
+  background-color: #201c24;
+}
+
+
+.card{
+    background-color: #20242c;
+    color: aliceblue;
+    width:170px;
+    margin-top: -80px; 
+    z-index: 2;
+    border-style: solid;
+    border-color:rgba(128, 128, 128, 0.559);
+}
+
+.card h5 {
+  white-space: nowrap;
+}

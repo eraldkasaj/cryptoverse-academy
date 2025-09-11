@@ -1,0 +1,23 @@
+.Crypto_Trading {
+  padding: 40px 20px;
+  background-color: #201c24;
+}
+
+.Crypto_Trading_Title {
+  text-align:start;
+  margin-left: 40px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.Cards_Wrapper {
+  display: flex;
+  justify-content: space-around; 
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 0 0 19rem;
+}

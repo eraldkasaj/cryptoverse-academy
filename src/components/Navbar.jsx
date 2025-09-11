@@ -1,9 +1,8 @@
-import '../navbar/Navbar.css'
 import binance_logo from '../assets/binance_logo.png'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand-lg bg-dark">
   <div className="container-fluid">
     <a className="navbar-brand" href="#"><img src={binance_logo} alt="logo" width="90" height="60"></img></a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +45,7 @@ const Navbar = () => {
         </li>
       </ul>
     </div>
-    */navbar-right*/
+    {/*navbar-right*/}
     
         <div className='navbar-right'>
              <ul className="navbar-nav">
