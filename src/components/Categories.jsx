@@ -7,7 +7,7 @@ const Categories = () => {
       <div className="container">
         <div className="row justify-content-center text-center g-5">
           <div className="col-md-2 col-6 ">
-            <div className="card p-2 shadow-sm ">
+            <div className="card p-2 shadow-sm">
                 <i class="bi bi-shield-lock-fill fs-3"></i>
               <h5>Crypto Security</h5>
             </div>

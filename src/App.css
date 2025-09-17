@@ -1,3 +1,10 @@
+:root {
+  --primary: #735EE2;   
+  --secondary: #7F71C9; 
+  --black:#080708;
+  --white: #F7F7F6;     
+}
+
 html, body {
   overflow-x: hidden; 
 }

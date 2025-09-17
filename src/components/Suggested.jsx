@@ -1,13 +1,14 @@
 import '../components/Suggested.css'
-import binance from '../assets/img binance.png'
-import binance_logo from '../assets/binance_logo.png'
+import blockchain from '../assets/blockchain.png'
+import defi from '../assets/defi.png'
+import mining from '../assets/mining.png'
 
 const Suggested = () => {
 
     return (
     <div className='suggested'>
     <div id="carouselExampleCaptions" className="carousel slide">
-  <div className="carousel-indicators ">
+  <div className="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" 
       className="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" 
@@ -20,13 +21,19 @@ const Suggested = () => {
     <div className="carousel-item active">
       <div className="row align-items-center">
         <div className="col-md-5 custom-image-box">
-          <img src={binance} className="" alt="slide1"/>
+          <img src={blockchain} className="" alt="slide1"/>
         </div>
         <div className="col-md-6 mt-4">
-          <h5>Earn Your First Bitcoin</h5>
-          <p>New to crypto? Learn how Bitcoin works and complete a short quiz to earn BTC — new users only.</p>
+          <h5>Çfarë është Blockchain?</h5>
+          <p>Mendo blockchain si një libër i madh publik:
+
+              Çdo faqe = një bllok me transaksione.
+
+              Libri ruhet në qindra kopje në kompjuterë të ndryshëm.
+
+              Nëse dikush përpiqet të ndryshojë një faqe, do dallojë menjëherë sepse nuk përputhet me kopjet e tjera.</p>
          <button type="button" className="btn btn-primary btn-custom">
-         Get Started
+        Lexo me shume
         </button>
 
         </div>
@@ -36,13 +43,13 @@ const Suggested = () => {
     <div className="carousel-item">
       <div className="row align-items-center">
         <div className="col-md-5 custom-image-box">
-          <img src={binance_logo} className="" alt="slide2"/>
+          <img src={defi} className="" alt="slide2"/>
         </div>
         <div className="col-md-6 mt-4">
           <h5>Beginner Track</h5>
           <p>The Beginner Track provides an introductory overview of the blockchain ecosystem to equip beginners with the fundamental concepts needed to navigate the cryptocurrency space.</p>
          <button type="button" className="btn btn-primary btn-custom">
-         Get Started
+        Learn More
         </button>
 
         </div>
@@ -52,13 +59,13 @@ const Suggested = () => {
     <div className="carousel-item">
       <div className="row align-items-center">
         <div className="col-md-5 custom-image-box">
-          <img src={binance} className="" alt="slide3"/>
+          <img src={mining} className="" alt="slide3"/>
         </div>
          <div className="col-md-6 mt-4">
           <h5>Intermediate Track</h5>
           <p>The Intermediate Track offers a deep dive into the intricacies of blockchain technology, designed to advance the expertise of those familiar with the basics of cryptocurrencies.</p>
          <button type="button" className="btn btn-primary btn-custom">
-         Get Started
+        Learn More
         </button>
         </div>
       </div>

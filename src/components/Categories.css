@@ -1,16 +1,16 @@
 .categories {
-  background-color: #201c24;
+  background-color:var(--primary);
 }
 
 
-.card{
-    background-color: #20242c;
-    color: aliceblue;
+.categories .card{
+    background-color:var(--black);
+    color:var(--white);
     width:170px;
     margin-top: -80px; 
     z-index: 2;
     border-style: solid;
-    border-color:rgba(128, 128, 128, 0.559);
+    border-color:var(--white)
 }
 
 .card h5 {

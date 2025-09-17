@@ -1,10 +1,9 @@
 import "../components/Footer.css";
-import logo from '../assets/binance_logo.png'
+import logo from "../assets/logo1.png";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      {/* Social Media Section */}
       <div className="footer-social">
         <span>Get connected with us:</span>
         <div className="icons">
@@ -21,7 +20,7 @@ const Footer = () => {
         <div>
           <h6>About</h6>
           <img 
-                src={logo}  
+                src={logo}
                 alt="Cryptoverse Logo" 
                 className="footer-logo"
             />
@@ -49,7 +48,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright */}
       <div className="footer-bottom">
         © {new Date().getFullYear()} Cryptoverse Academy. All rights reserved.
       </div>

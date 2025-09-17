@@ -1,10 +1,11 @@
-import binance_logo from '../assets/binance_logo.png'
+import logo from '../assets/logo1.png'
+import '../components/Navbar.css'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-dark">
+      <nav className="navbar navbar-expand-lg custom-navbar">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#"><img src={binance_logo} alt="logo" width="90" height="60"></img></a>
+    <a className="navbar-brand" href="#"><img src={logo} alt="logo" width="90" height="60"></img></a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>

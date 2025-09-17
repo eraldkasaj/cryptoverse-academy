@@ -1,6 +1,6 @@
 .Crypto_Trading {
   padding: 40px 20px;
-  background-color: #201c24;
+  background-color:var(--primary)
 }
 
 .Crypto_Trading_Title {
@@ -20,4 +20,7 @@
 
 .card {
   flex: 0 0 19rem;
+}
+.card-img-top{
+  background-color: var(--white);
 }

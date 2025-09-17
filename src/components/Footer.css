@@ -5,9 +5,8 @@
   font-size: 0.95rem;
 }
 .footer-logo {
-  width: 120px;         /* madhësia e logos */
-  margin: 15px 0;       /* hapësirë sipër e poshtë */
-  display: block;       /* qëndron në një rresht veç */
+  width: 120px;        
+  display: block;       
 }
 
 .footer-social {
@@ -21,7 +20,7 @@
 }
 
 .footer-social .icons a {
-  color: #fbd334; /* verdha Binance */
+  color: #fbd334; 
   margin-left: 15px;
   font-size: 1.3rem;
   transition: color 0.3s ease;
