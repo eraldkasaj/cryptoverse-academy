@@ -1,10 +1,10 @@
-import Navbar from "../components/Navbar"
-import Hero from "../components/Hero"
-import Categories from "../components/Categories"
-import Suggested from "../components/Suggested"
-import Latest_Content from "../components/Latest_Content"
-import Crypto_Trading from "../components/Crypto_Trading"
-import Footer from "../components/Footer"
+import Navbar from "../components_home/Navbar"
+import Hero from "../components_home/Hero"
+import Categories from "../components_home/Categories"
+import Suggested from "../components_home/Suggested"
+import Latest_Content from "../components_home/Latest_Content"
+import Crypto_Trading from "../components_home/Crypto_Trading"
+import Footer from "../components_home/Footer"
 
 const Home = () => {
     return (

@@ -1,20 +1,22 @@
 import logo from '../assets/logo1.png'
-import '../components/Navbar.css'
+import '../components_home/Navbar.css'
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
     return (
       <nav className="navbar navbar-expand-lg custom-navbar">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#"><img src={logo} alt="logo" width="90" height="60"></img></a>
+    <Link className="navbar-brand nav-link" to="/"><img src={logo} alt="logo" width="90" height="60"></img></Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
       <ul className="navbar-nav navbar-left">
          <li className="nav-item dropdown ">
-          <a className="nav-link dropdown-toggle  text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Articles
-          </a>
+          <Link className="nav-link text-white" to="/analysis">
+            Analysis
+          </Link>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a className="dropdown-item" href="#">Action</a></li>
             <li><a className="dropdown-item" href="#">Another action</a></li>
@@ -32,7 +34,7 @@ const Navbar = () => {
           </ul>
         </li>
         <li className="nav-item">
-          <a className="nav-link  text-white" href="#">Academy</a>
+          <Link className="nav-link  text-white" to="/research">Research</Link>
         </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle  text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

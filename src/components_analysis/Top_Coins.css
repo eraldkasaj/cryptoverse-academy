@@ -1,0 +1,25 @@
+.costum-card{
+    background-color: var(--primary);
+}
+
+.custom-table {
+  background-color: white;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  width: 1225px;
+}
+
+table th {
+  font-weight: 600;
+}
+table td{
+  border-bottom: 1px solid #ddd;
+}
+
+table img {
+  vertical-align: middle;
+}
+
+table tr:hover{
+ background-color:#ddd;
+}

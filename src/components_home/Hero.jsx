@@ -1,5 +1,5 @@
 
-import '../components/Hero.css'
+import '../components_home/Hero.css'
 import heroVideo from '../assets/video-section.mp4'
 
 const Hero = () => {

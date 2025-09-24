@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../components/Latest_Content.css";
+import "../components_home/Latest_Content.css";
 
 const Latest_Content = () => {
   const [news, setNews] = useState([]);

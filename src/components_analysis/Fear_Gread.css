@@ -1,0 +1,27 @@
+
+.fear-greed-card {
+ max-height: fit-content;
+ margin-left: 50px;
+ margin-top: 40px;
+}
+
+.custom-progress {
+  margin-top: 30px;
+  height: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgb(185, 185, 185);
+}
+
+
+.bar-fear {
+  background-color: #e74c3c !important; /* e kuqe */
+}
+
+.bar-neutral {
+  background-color: #f1c40f !important; /* e verdhë */
+}
+
+.bar-greed {
+  background-color: #16a085 !important; /* e gjelbër */
+}

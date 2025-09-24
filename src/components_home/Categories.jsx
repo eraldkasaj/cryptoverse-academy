@@ -1,4 +1,4 @@
-import '../components/Categories.css'
+import '../components_home/Categories.css'
 
 
 const Categories = () => {

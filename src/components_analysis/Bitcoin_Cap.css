@@ -1,0 +1,39 @@
+
+.market-overview {
+  display: flex;
+  gap: 20px;          
+  align-items: flex-start;
+  margin-top: 60px;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;          
+  width: 250px;  
+  margin-left: 20px;   
+}
+
+.left-section .custom-card{
+  border-radius: 10px;
+  padding:15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 250px;
+  height: 180px; 
+  margin-top: 40px;
+  background-color:white;
+}
+
+.right-section {
+  flex: 1;             
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.Btc_chart{
+  background-color:white;
+  border-radius: 10px;  
+  width:850px;
+  height: 500px;
+  margin-left: 100px;
+}

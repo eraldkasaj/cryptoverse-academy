@@ -1,4 +1,4 @@
-import '../components/Suggested.css'
+import '../components_home/Suggested.css'
 import blockchain from '../assets/blockchain.png'
 import defi from '../assets/defi.png'
 import mining from '../assets/mining.png'
