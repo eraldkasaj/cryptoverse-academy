@@ -1,0 +1,50 @@
+.nft-metaverse-section {
+  padding: 30px;
+  background: #f9fafc;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #222;
+}
+
+.nft-metaverse-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nft-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.nft-card:hover {
+  transform: translateY(-5px);
+}
+
+.nft-card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.nft-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.nft-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
