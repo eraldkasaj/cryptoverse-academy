@@ -1,40 +1,61 @@
 .footer {
-  background-color: #201c24;
+  background: linear-gradient(135deg, #1a1a1d, #2c2c34);
   color: #bbb;
-  padding: 40px 20px 20px;
+  padding: 10px 20px 20px;
   font-size: 0.95rem;
 }
+
+/* Logo */
 .footer-logo {
-  width: 120px;        
-  display: block;       
+  width: 120px;
+  display: block;
+  margin-bottom: 15px;
 }
 
+/* Social icons */
 .footer-social {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   border-bottom: 1px solid #333;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
   flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
-.footer-social .icons a {
-  color: #fbd334; 
-  margin-left: 15px;
-  font-size: 1.3rem;
-  transition: color 0.3s ease;
-}
-
-.footer-social .icons a:hover {
+.footer-social span {
+  font-weight: 500;
   color: #fff;
 }
 
+.footer-social .icons {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social .icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2c2c34;
+  color: var(--primary) ;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.footer-social .icons a:hover {
+  background: var(--primary) ;
+  color: #000;
+}
+
+
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  margin-bottom: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  
 }
 
 .footer-links h6 {
@@ -44,21 +65,50 @@
 }
 
 .footer-links a {
-  display: block;
+  position: relative;
+  display: inline-block;
   color: #bbb;
   text-decoration: none;
   margin-bottom: 10px;
   transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
-  color: #fbd334;
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary)  
+  transition: width 0.3s ease;
 }
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+
+.footer-links p {
+  margin: 8px 0;
+  color: #bbb;
+}
+
+.footer-links p i {
+  margin-right: 8px;
+   color: var(--primary)
+}
+
 
 .footer-bottom {
   text-align: center;
   font-size: 0.85rem;
   border-top: 1px solid #333;
-  padding-top: 15px;
-  color: #777;
+  padding-top: 20px;
+  color: #999;
+  letter-spacing: 0.5px;
 }

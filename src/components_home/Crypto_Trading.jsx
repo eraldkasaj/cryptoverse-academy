@@ -26,7 +26,7 @@ const Crypto_Trading = () => {
 
       <div className="Cards_Wrapper">
         {coins.map((coin, index) => (
-          <div className="card mt-2 bg-danger" key={index}>
+          <div className="card mt-2 " key={index}>
             <img
               src={coin.image}
               className="card-img-top"
