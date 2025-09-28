@@ -17,7 +17,6 @@ const Bitcoin_Cap = () => {
   const [dataPoints, setDataPoints] = useState([]);
   const [btcStats, setBtcStats] = useState(null);
 
-  // --- useEffect për chart ---
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -37,7 +36,6 @@ const Bitcoin_Cap = () => {
     fetchData();
   }, []);
 
-  // --- useEffect për statistika ---
   useEffect(() => {
     const fetchStats = async () => {
       try {
@@ -82,9 +80,9 @@ const Bitcoin_Cap = () => {
     <div className="market-overview">
       <div className="left-section">
         <div className="custom-card">
-          <h4>Bitcoin (BTC)</h4>
+          <h4>Bitcoin </h4>
           <p className="mt-4 fw-bold">Price: ${parseFloat(btcStats.lastPrice).toLocaleString()}</p>
-          <p className="mt-4 fw-bold">Change (24h): 
+          <p className="mt-4 fw-bold">Change : 
             <span style={{color: btcStats.priceChangePercent > 0 ? "green" : "red"}}>
               {btcStats.priceChangePercent}%
             </span>
@@ -92,7 +90,7 @@ const Bitcoin_Cap = () => {
         </div>
 
         <div className="custom-card">
-          <h4>BTC High/Low (24h)</h4>
+          <h4>BTC High/Low </h4>
           <p className="mt-4 fw-bold">High: ${parseFloat(btcStats.highPrice).toLocaleString()}</p>
           <p className="mt-4 fw-bold">Low: ${parseFloat(btcStats.lowPrice).toLocaleString()}</p>
         </div>

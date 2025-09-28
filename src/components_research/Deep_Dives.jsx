@@ -13,10 +13,10 @@ const Deep_Dives = () => {
       </header>
 
       <div className="tok-grid">
-        {/* 1) Distribution */}
+       
         <article className="tok-card">
           <div className="tok-illustration">
-            {/* Ilustrim SVG: shpërndarje */}
+           
             <svg viewBox="0 0 240 160" className="svg-illu" aria-hidden="true">
               <defs>
                 <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
@@ -47,10 +47,10 @@ const Deep_Dives = () => {
           </div>
         </article>
 
-        {/* 2) Inflation/Deflation */}
+       
         <article className="tok-card">
           <div className="tok-illustration">
-            {/* Ilustrim SVG: inflacion/deflacion */}
+           
             <svg viewBox="0 0 240 160" className="svg-illu" aria-hidden="true">
               <polyline
                 points="20,120 60,90 100,100 140,60 180,70 220,40"
@@ -79,10 +79,10 @@ const Deep_Dives = () => {
           </div>
         </article>
 
-        {/* 3) Utility */}
+      
         <article className="tok-card">
           <div className="tok-illustration">
-            {/* Ilustrim SVG: përdorim/utility */}
+          
             <svg viewBox="0 0 240 160" className="svg-illu" aria-hidden="true">
               <rect x="18" y="30" width="60" height="40" rx="8" fill="#6366f1" opacity="0.9"/>
               <rect x="90" y="30" width="60" height="40" rx="8" fill="#22c55e" opacity="0.9"/>
