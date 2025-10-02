@@ -25,7 +25,7 @@ const Top_Coins = () => {
   }
 
   return (
-    <div className="costum-card p-3 mt-4">
+    <div className="costum-card p-3 mt-5">
       <h5 className="text-light">Top Cryptocurrencies</h5>
       <table className="custom-table table-hover align-middle">
         <thead>

@@ -1,4 +1,5 @@
 import "../components_research/NFT_Metaverse.css";
+import photo from '../assets/logo1.png'
 
 const NFT_Metaverse = () => {
   return (
@@ -8,7 +9,7 @@ const NFT_Metaverse = () => {
 
         <div className="nft-card">
           <img
-            src="https://cryptologos.cc/logos/ethereum-eth-logo.png"
+            src={photo}
             alt="NFT"
           />
           <h3>Çfarë janë NFT-të?</h3>
@@ -21,7 +22,7 @@ const NFT_Metaverse = () => {
 
         <div className="nft-card">
           <img
-            src="https://cryptologos.cc/logos/decentraland-mana-logo.png"
+            src={photo}
             alt="Metaverse"
           />
           <h3>Metaverse</h3>
@@ -34,7 +35,7 @@ const NFT_Metaverse = () => {
 
         <div className="nft-card">
           <img
-            src="https://cryptologos.cc/logos/sandbox-sand-logo.png"
+            src={photo}
             alt="Use Cases"
           />
           <h3>Përdorimet reale</h3>

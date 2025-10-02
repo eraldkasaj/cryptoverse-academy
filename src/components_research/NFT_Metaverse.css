@@ -1,50 +1,58 @@
 .nft-metaverse-section {
-  padding: 30px;
-  background: #f9fafc;
+  padding: 50px 20px;
+  background: transparent; 
 }
 
 .section-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 35px;
   text-align: center;
-  color: #222;
+  color: #ffffff; 
 }
 
 .nft-metaverse-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .nft-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  padding: 20px;
-  width: 280px;
+  background: #1e1e2f; 
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  padding: 25px;
+  width: 300px;
   text-align: center;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nft-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.85);
 }
+
 
 .nft-card img {
-  width: 60px;
-  margin-bottom: 15px;
+  width: 70px;
+  margin-bottom: 18px;
+  transition: transform 0.3s ease;
+}
+.nft-card:hover img {
+  transform: scale(1.1);
 }
 
+
 .nft-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #4da6ff; 
 }
+
 
 .nft-card p {
   font-size: 0.95rem;
-  color: #555;
-  line-height: 1.4;
+  color: #dddddd; 
+  line-height: 1.5;
 }

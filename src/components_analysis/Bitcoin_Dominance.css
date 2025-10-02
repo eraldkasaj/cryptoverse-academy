@@ -1,11 +1,51 @@
-
-.bitcoin_dominance{
-  background-color:white;
+.bitcoin_dominance {
+  background-color: #1e1e2f;   
   width: 350px;
-  margin-top: 85px;
+  margin-top: 100px;
   margin-left: 50px;
-  border-radius: 8px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.bitcoin_dominance:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.75);
+}
+
+.bitcoin_dominance .fear-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f5f5f5;  
+  display: flex;
+  align-items: center;
+}
+
+/* Ikona info */
+.bitcoin_dominance .fear-text i {
+  color: #aaa;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.bitcoin_dominance .fear-text i:hover {
+  color: #fff;
+}
+
+/* Tekstet brenda (BTC %, ETH %, Others %) */
+.bitcoin_dominance .text-center {
+  color: #f0f0f0;   /* e bardhë e butë */
+}
+
+.bitcoin_dominance .fs-4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;   /* përqindjet me të bardhë */
+}
+
+/* Dots */
 .dot {
   display: inline-block;
   width: 10px;
@@ -14,24 +54,26 @@
   margin-right: 6px;
   vertical-align: middle; 
 }
-.dot.btc { background-color: #f39c12; }
-.dot.eth { background-color: #1867ff; }
-.dot.others { background-color: #ccc; }
+.dot.btc { background-color: #f39c12; }  /* Portokalli */
+.dot.eth { background-color: #1867ff; }  /* Blu */
+.dot.others { background-color: #aaa; }  /* Gri e hapur */
 
-
+/* Progress bar container */
 .dominance-bar {
   display: flex;         
-  height: 8px;           
-  border-radius: 8px;     
+  height: 10px;           
+  border-radius: 10px;     
   overflow: hidden;       
-  margin-top: 8px;        
-  background-color: #eee; 
+  margin-top: 15px;        
+  background-color: #2e2e3e; /* gri e errët për dark mode */
 }
 
+/* Progress bar sections */
 .bitcoin_dominance .bar {
   height: 100%;
+  transition: width 1s ease-in-out;
 }
 
 .bar.btc { background-color: #f39c12; }
 .bar.eth { background-color: #1867ff; }
-.bar.others { background-color: #ccc; }
+.bar.others { background-color: #aaa; }

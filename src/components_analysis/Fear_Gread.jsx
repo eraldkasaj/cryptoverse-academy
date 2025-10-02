@@ -27,7 +27,7 @@ useEffect(()=>{
 
 return (
   <div className="card p-3 fear-greed-card">
-   <div className="fear-text text-dark fw-bold">
+   <div className="fear-text fw-bold">
   Fear and Greed Index
   <i
     className="bi bi-info-circle ms-2"
@@ -52,8 +52,8 @@ return (
     </div>
 
     <div className="text-center fw-bold">
-      <div className="text-dark fs-4">{value}%</div>
-      <div className="text-muted">{label}</div>
+      <div className="fs-4">{value}%</div>
+      <div className="text-light">{label}</div>
     </div>
   </div>
 );

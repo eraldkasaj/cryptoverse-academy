@@ -32,7 +32,7 @@ const BitcoinDominance = () => {
 
   return (
     <div className="p-2 bitcoin_dominance">
-      <div className="fear-text text-dark fw-bold">
+      <div className="fear-text ps-2 fw-bold">
         Bitcoin Dominance
         <i
           className="bi bi-info-circle ms-2"

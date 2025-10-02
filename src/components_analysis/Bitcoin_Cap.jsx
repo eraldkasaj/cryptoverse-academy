@@ -67,14 +67,17 @@ const Bitcoin_Cap = () => {
     ],
   }
 
-  const options = {
-    responsive: true,
-    plugins: { legend: { display: true } },
-    scales: {
-      x: { ticks: { maxTicksLimit: 6 } },
-      y: { beginAtZero: false },
-    },
-  };
+ const options = {
+  responsive: true,
+  plugins: { 
+    legend: { labels: { color: "#f5f5f5" } }   
+  },
+  scales: {
+    x: { ticks: { maxTicksLimit: 6, color: "#ddd" }, grid: { color: "#333" } },
+    y: { beginAtZero: false, ticks: { color: "#ddd" }, grid: { color: "#333" } },
+  },
+};
+
 
   return (
     <div className="market-overview">
