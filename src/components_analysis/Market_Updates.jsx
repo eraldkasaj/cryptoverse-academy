@@ -8,22 +8,32 @@ const Market_Updates = () => {
     const [gainers,setGainers] = useState([])
     const [losers,setLosers] = useState([])
 
-    useEffect(()=>{
-        const fetchData =async () => {
-            try {
-                const gainResult = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=price_change_percentage_24h_desc&per_page=5&page=1")
-                const gainData =await gainResult.json()
-                setGainers(gainData)
+  useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const result = await fetch(
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1"
+      );
+      const data = await result.json();
+      const topGainers = data
+        .filter((coin) => coin.price_change_percentage_24h > 0) 
+        .sort((a, b) => b.price_change_percentage_24h - a.price_change_percentage_24h) 
+        .slice(0, 5); 
 
-                const loseResult = await fetch( "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=price_change_percentage_24h_asc&per_page=5&page=1")
-                const loseData = await loseResult.json()
-                setLosers(loseData)
-            } catch (error) {
-                 console.error("Error fetching data:", error);
-            }
-        }
-        fetchData()
-    },[])
+      const topLosers = data
+        .filter((coin) => coin.price_change_percentage_24h < 0) 
+        .sort((a, b) => a.price_change_percentage_24h - b.price_change_percentage_24h) 
+        .slice(0, 5); 
+
+      setGainers(topGainers);
+      setLosers(topLosers);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  fetchData();
+}, []);
+
 
     return (
         <div className='market_updates'>

@@ -7,39 +7,42 @@ const Footer = () => {
       <div className="footer-social">
         <span>Get connected with us:</span>
         <div className="icons">
-          <a href="#"><i className="bi bi-facebook"></i></a>
-          <a href="#"><i className="bi bi-twitter"></i></a>
-          <a href="#"><i className="bi bi-instagram"></i></a>
-          <a href="#"><i className="bi bi-linkedin"></i></a>
-          <a href="#"><i className="bi bi-github"></i></a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><i className="bi bi-twitter"></i></a>
+          <a href="https://www.instagram.com/cryptoversealbania/" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/cryptoverse-albania/" target="_blank" rel="noopener noreferrer"><i className="bi bi-linkedin"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><i className="bi bi-github"></i></a>
         </div>
       </div>
 
-      
       <div className="footer-links">
         <div>
           <h6>About</h6>
-          <img 
-                src={logo}
-                alt="Cryptoverse Logo" 
-                className="footer-logo"
-            />
-          <p>Learn and explore the world of crypto with Binance Academy.</p>
+          <img src={logo} alt="Cryptoverse Logo" className="footer-logo" />
+          <p>Albanians one-stop guide to all things crypto </p>
         </div>
         <div>
           <h6>Products</h6>
-          <a href="#">Trading</a>
-          <a href="#">Academy</a>
-          <a href="#">Wallet</a>
-          <a href="#">NFT</a>
+          <ul>
+            <li>Trading Academy</li>
+            <li>Wallet</li>
+            <li>NFT</li>
+            <li>Këshillime në treg</li>
+            <li>Sinjale tregtare (Buy/Sell)</li>
+            <li>Analiza e tregut</li>
+            <li>Strategji investimi</li>
+          </ul>
         </div>
+
         <div>
           <h6>Useful Links</h6>
-          <a href="#">Pricing</a>
-          <a href="#">FAQ</a>
-          <a href="#">Blog</a>
-          <a href="#">Support</a>
+          <ul>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
         </div>
+
         <div>
           <h6>Contact</h6>
           <p><i className="bi bi-geo-alt-fill"></i> Tirana, Albania</p>

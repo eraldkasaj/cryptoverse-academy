@@ -33,9 +33,14 @@ const Top_Picks_News = () => {
               <h5>{article.title}</h5>
             </a>
             <p>{article.description}</p>
-            <small>
-              {article.source?.name} — {new Date(article.publishedAt).toLocaleDateString()}
-            </small>
+           <small>
+            {article.source?.name} —{" "}
+            {new Date(article.publishedAt).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })}
+          </small>
           </div>
         ))}
       </div>

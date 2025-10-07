@@ -1,8 +1,9 @@
 .footer {
   background: linear-gradient(135deg, #1a1a1d, #2c2c34);
   color: #bbb;
-  padding: 10px 20px 20px;
+  padding: 10px 30px;
   font-size: 0.95rem;
+  border-top: 4px solid #6a5acd;
 }
 
 /* Logo */
@@ -12,14 +13,15 @@
   margin-bottom: 15px;
 }
 
-/* Social icons */
+/* Social Section */
 .footer-social {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #333;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #333;
   padding-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .footer-social span {
@@ -36,26 +38,25 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: #2c2c34;
-  color: var(--primary) ;
+  color: #a78bfa;
   font-size: 1.3rem;
   transition: all 0.3s ease;
 }
 
 .footer-social .icons a:hover {
-  background: var(--primary) ;
+  background: #a78bfa;
   color: #000;
 }
 
-
+/* Footer Grid */
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
-  
 }
 
 .footer-links h6 {
@@ -64,35 +65,37 @@
   color: #fff;
 }
 
-.footer-links a {
-  position: relative;
-  display: inline-block;
+/* Links and lists */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
   color: #bbb;
-  text-decoration: none;
-  margin-bottom: 10px;
+  cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.footer-links a::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--primary)  
-  transition: width 0.3s ease;
+.footer-links li:hover {
+  color: #fff;
+}
+
+.footer-links a {
+  display: block;
+  color: #bbb;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
   color: #fff;
 }
 
-.footer-links a:hover::after {
-  width: 100%;
-}
-
-
+/* Contact */
 .footer-links p {
   margin: 8px 0;
   color: #bbb;
@@ -100,15 +103,16 @@
 
 .footer-links p i {
   margin-right: 8px;
-   color: var(--primary)
+  color: #a78bfa;
 }
 
-
+/* Bottom Section */
 .footer-bottom {
   text-align: center;
   font-size: 0.85rem;
   border-top: 1px solid #333;
-  padding-top: 20px;
+  padding-top: 15px;
+  margin-top: 5px;
   color: #999;
   letter-spacing: 0.5px;
 }

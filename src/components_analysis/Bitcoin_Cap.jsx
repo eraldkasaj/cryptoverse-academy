@@ -94,8 +94,8 @@ const Bitcoin_Cap = () => {
 
         <div className="custom-card">
           <h4>BTC High/Low </h4>
-          <p className="mt-4 fw-bold">High: ${parseFloat(btcStats.highPrice).toLocaleString()}</p>
-          <p className="mt-4 fw-bold">Low: ${parseFloat(btcStats.lowPrice).toLocaleString()}</p>
+          <p className="mt-4 fw-bold"><span className="text-success">High</span>: ${parseFloat(btcStats.highPrice).toLocaleString()}</p>
+          <p className="mt-4 fw-bold"><span className="text-danger">Low</span>: ${parseFloat(btcStats.lowPrice).toLocaleString()}</p>
         </div>
       </div>
 
