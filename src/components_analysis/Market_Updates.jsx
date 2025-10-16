@@ -39,7 +39,7 @@ const Market_Updates = () => {
         <div className='market_updates'>
             <div className='market_text'><h3>Crypto Market Overview</h3><p>Stay updated on the latest cryptocurrency market trends, including Bitcoin dominance, altcoin season, ETF net flows, and real-time market sentiment, all conveniently accessible in one place on CoinMarketCap.</p></div>
              <div className='market_div'>
-            <div className='market_24h'>
+            <div className='market_24h' id='market_24h'>
                 <div className='gainers'>
                     <h3>Gainers 24h</h3>
                 {gainers.map((coin,index)=>{
