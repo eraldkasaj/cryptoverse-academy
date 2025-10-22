@@ -1,0 +1,153 @@
+
+.about-wrapper {
+  background-color: #f8f9ff;
+  min-height: 60vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px; 
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  width: 100%;
+  gap: 50px;
+}
+
+.about-image {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.04);
+}
+
+.about-text {
+  flex: 1 1 60%;
+  text-align: left;
+}
+
+.why-learn-wrapper {
+  background-color: #fff;
+  padding: 70px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-learn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  gap: 60px;
+}
+
+.why-learn-text {
+  flex: 1 1 60%;
+}
+
+.why-learn-text h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.why-learn-text ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.why-learn-text li {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.6;
+}
+
+.why-learn-text li::before {
+  content: "•";
+  color: #4c5eff;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.why-learn-image {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-learn-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.why-learn-image img:hover {
+  transform: scale(1.04);
+}
+
+
+.faq-section {
+  background-color: #f8f9ff;
+}
+
+.faq-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #222;
+}
+
+.accordion-item {
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  background-color: #eef1ff;
+  color: #222;
+  font-weight: 600;
+  font-size: 1.05rem;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #4c5eff;
+  color: #fff;
+}
+
+.accordion-body {
+  background-color: #fff;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+}

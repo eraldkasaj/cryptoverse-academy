@@ -1,18 +1,51 @@
 .categories {
-  background-color:var(--primary);
+  background-color: var(--primary);
+  text-align: center;
+  padding: 40px 0;
 }
 
-
-.categories .card{
-    background-color:var(--black);
-    color:var(--white);
-    width:170px;
-    margin-top: -80px; 
-    z-index: 2;
-    border-style: solid;
-    border-color:var(--white)
+.categories .card {
+  background-color: var(--black);
+  color: var(--white);
+  width: 170px;
+  border: 2px solid var(--white);
+  border-radius: 12px;
+  z-index: 2;
+  transition: all 0.3s ease;
+  margin: 15px auto;
 }
 
-.card h5 {
+.categories .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.categories .card i {
+  margin-bottom: 8px;
+}
+
+.categories .card h5 {
   white-space: nowrap;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .categories {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .categories .row {
+    row-gap: 25px; 
+  }
+
+  .categories .card {
+    width: 140px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .categories .card h5 {
+    font-size: 13px;
+  }
 }

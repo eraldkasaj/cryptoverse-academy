@@ -5,6 +5,7 @@ import Analysis from './pages/Analysis'
 import Research from "./pages/Research";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import AboutUs from "./pages/AboutUs";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/research" element={<Research/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
+         <Route path="/AboutUs" element={<AboutUs/>}/>
     </Routes>
    </Router>
 

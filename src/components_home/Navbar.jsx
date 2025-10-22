@@ -2,7 +2,7 @@ import logo from '../assets/logo1.png'
 import '../components_home/Navbar.css'
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import Search from '../components/Search';
+
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
@@ -66,9 +66,9 @@ const Navbar = () => {
                 Partnership
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a className="dropdown-item" href="#">soon</a></li>
-                <li><a className="dropdown-item" href="#">soon</a></li>
-                <li><a className="dropdown-item" href="#">soon</a></li>
+                <li><a className="dropdown-item" href="#">Available soon</a></li>
+                <li><a className="dropdown-item" href="#">Available soon</a></li>
+                <li><a className="dropdown-item" href="#">Available soon</a></li>
               </ul>
             </li>
           </ul>
@@ -77,18 +77,7 @@ const Navbar = () => {
         <div className="navbar-right">
           <ul className="navbar-nav d-flex align-items-center">
            
-            <li className="nav-item p-2">
-              <i
-                className="bi bi-search text-white"
-                onClick={() => setShowSearch(!showSearch)}
-              ></i>
-            </li>
-
-            {showSearch && (
-              <li className="nav-item">
-                <Search onSearch={(q) => console.log("Kërkohet:", q)} />
-              </li>
-            )}
+           
 
             {isLoggedIn ? (
               <>

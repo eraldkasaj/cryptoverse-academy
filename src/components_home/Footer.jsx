@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-social">
         <span>Get connected with us:</span>
         <div className="icons">
-          <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"><i className="bi bi-tiktok"></i></a>
+          <a href="https://www.tiktok.com/@cryptoversealbania/" target="_blank" rel="noopener noreferrer"><i className="bi bi-tiktok"></i></a>
           <a href="https://www.instagram.com/cryptoversealbania/" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram"></i></a>
           <a href="https://www.linkedin.com/company/cryptoverse-albania/" target="_blank" rel="noopener noreferrer"><i className="bi bi-linkedin"></i></a>
           <a href="https://linktr.ee/cryptoverse_albania" target="_blank" rel="noopener noreferrer"><i className="bi bi-telegram"></i></a>
@@ -26,7 +26,6 @@ const Footer = () => {
           <h6>Products</h6>
           <ul>
             <li><Link to="/research#nft-section">NFT</Link></li>
-            <li>Market Consulting</li>
           <li>
               <a 
                 href="https://linktr.ee/cryptoverse_albania" 
@@ -36,17 +35,20 @@ const Footer = () => {
               </a>
             </li>
              <li><Link to="/analysis#market_24h">Market Analysis</Link></li>
-            <li>Investment Strategy</li>
+            <li> <a 
+                href="https://linktr.ee/cryptoverse_albania" 
+                target="_blank" 
+              >Investment Strategy</a>
+            </li>
           </ul>
         </div>
 
         <div>
           <h6>Useful Links</h6>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Support</a></li>
+            <li><Link to="/AboutUs">About Us</Link></li>
+            <li><Link to="/AboutUs/#FAQ">FAQ</Link></li>
+             <li><span class="inactive-link" title="We’ll be back soon">Support</span></li>
           </ul>
         </div>
 
@@ -54,7 +56,7 @@ const Footer = () => {
           <h6>Contact</h6>
           <p><i className="bi bi-geo-alt-fill"></i> Tirana, Albania</p>
           <p><i className="bi bi-envelope-fill"></i> info@cryptoverse.com</p>
-          <p><i className="bi bi-telephone-fill"></i> +355 68 123 4567</p>
+          <p><i className="bi bi-telephone-fill"></i> +355 68 3431 133</p>
         </div>
       </div>
 
