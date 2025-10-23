@@ -22,7 +22,6 @@
   align-items: center;
 }
 
-/* Ikona info */
 .bitcoin_dominance .fear-text i {
   color: #aaa;
   font-size: 1.1rem;
@@ -34,41 +33,38 @@
   color: #fff;
 }
 
-/* Tekstet brenda (BTC %, ETH %, Others %) */
 .bitcoin_dominance .text-center {
-  color: #f0f0f0;   /* e bardhë e butë */
+  color: #f0f0f0;
 }
 
 .bitcoin_dominance .fs-4 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #ffffff;   /* përqindjet me të bardhë */
+  color: #ffffff;
 }
 
-/* Dots */
 .dot {
   display: inline-block;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   margin-right: 6px;
-  vertical-align: middle; 
+  vertical-align: middle;
 }
-.dot.btc { background-color: #f39c12; }  /* Portokalli */
-.dot.eth { background-color: #1867ff; }  /* Blu */
-.dot.others { background-color: #aaa; }  /* Gri e hapur */
 
-/* Progress bar container */
+.dot.btc { background-color: #f39c12; }
+.dot.eth { background-color: #1867ff; }
+.dot.others { background-color: #aaa; }
+
 .dominance-bar {
-  display: flex;         
-  height: 10px;           
-  border-radius: 10px;     
-  overflow: hidden;       
-  margin-top: 15px;        
-  background-color: #2e2e3e; /* gri e errët për dark mode */
+  display: flex;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+  background-color: #2e2e3e;
 }
 
-/* Progress bar sections */
 .bitcoin_dominance .bar {
   height: 100%;
   transition: width 1s ease-in-out;
@@ -77,3 +73,13 @@
 .bar.btc { background-color: #f39c12; }
 .bar.eth { background-color: #1867ff; }
 .bar.others { background-color: #aaa; }
+
+
+@media (max-width: 768px) {
+  .fear-greed-card,
+  .bitcoin_dominance {
+    width: calc(100% - 5px);  
+    margin-left: 5px;                  
+    margin-top: 30px;   
+  }
+}

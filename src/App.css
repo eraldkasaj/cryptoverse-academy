@@ -1,10 +1,35 @@
-:root {
-  --primary: #735EE2;   
-  --secondary: #7F71C9; 
-  --black:#080708;
-  --white: #F7F7F6;     
+/* ================= LIGHT MODE ================= */
+[data-theme="light"] {
+  --bg-main: #f4f4f4;
+  --bg-card: #ffffff;
+  --text-main: #111;
+  --text-secondary: #333;
+  --primary: #6c5ce7;
 }
 
-html, body {
-  overflow-x: hidden; 
+/* ================= DARK MODE ================= */
+[data-theme="dark"] {
+  --bg-main: #18122B;
+  --bg-card: #1e1e2f;
+  --text-main: #ffffff;
+  --text-secondary: #aaa;
+  --primary: #8e7dff;
+}
+
+/* ================= ELEMENTET GLOBALE ================= */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-navbar {
+  background-color: var(--primary);
+  transition: background-color 0.3s ease;
+}
+
+.card, .section, .table {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  transition: all 0.3s ease;
 }

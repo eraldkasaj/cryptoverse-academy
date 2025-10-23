@@ -3,13 +3,19 @@ import '../components_home/Navbar.css'
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
-
 const Navbar = () => {
-  const [showSearch, setShowSearch] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState("");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const navigate = useNavigate();
 
+  // Seto temën kur ngarkohet faqja
+  useEffect(() => {
+    document.body.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  // Kontrollo nëse user është loguar
   useEffect(() => {
     const loggedInStatus = localStorage.getItem("isLoggedIn");
     const loggedUser = localStorage.getItem("loggedInUser");
@@ -20,6 +26,7 @@ const Navbar = () => {
     }
   }, []);
 
+  // Funksioni për logout
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("loggedInUser");
@@ -28,12 +35,18 @@ const Navbar = () => {
     navigate("/");
   };
 
+  // Funksioni për ndryshimin e temës
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
   return (
     <nav className="navbar navbar-expand-lg custom-navbar">
       <div className="container-fluid">
         <Link className="navbar-brand nav-link" to="/">
           <img src={logo} alt="logo" width="90" height="60" />
         </Link>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -76,9 +89,6 @@ const Navbar = () => {
 
         <div className="navbar-right">
           <ul className="navbar-nav d-flex align-items-center">
-           
-           
-
             {isLoggedIn ? (
               <>
                 <li className="nav-item p-2 text-white d-flex align-items-center">
@@ -101,8 +111,14 @@ const Navbar = () => {
               </>
             )}
 
+            {/* Butoni për ndërrim teme */}
             <li className="nav-item p-2">
-              <i className="bi bi-brightness-high text-white fs-5"></i>
+              <i
+                onClick={toggleTheme}
+                className={`bi ${theme === "light" ? "bi-moon" : "bi-brightness-high"} text-white fs-5`}
+                style={{ cursor: "pointer", transition: "0.3s" }}
+                title={theme === "light" ? "Dark mode" : "Light mode"}
+              ></i>
             </li>
           </ul>
         </div>

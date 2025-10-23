@@ -17,14 +17,16 @@
 .market_text p {
   font-size: 0.9rem;
   color: #e0e0e0;
+  max-width: 800px;
 }
-
 
 .market_div {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  justify-content:flex-start;
+  gap: 40px;
 }
-
 
 .market_24h {
   display: flex;
@@ -33,23 +35,21 @@
   width: 50%;
 }
 
-
 .gainers,
 .losers {
   width: 100%;
-  background: #1e1e2f; 
+  background: #1e1e2f;
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .gainers:hover,
 .losers:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
-
 
 .gainers h3,
 .losers h3 {
@@ -59,7 +59,6 @@
   color: #ffffff;
 }
 
-
 .gainers li,
 .losers li {
   display: flex;
@@ -67,7 +66,7 @@
   font-size: 0.9rem;
   list-style: none;
   padding: 8px 12px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .gainers li:last-child,
@@ -75,13 +74,11 @@
   border-bottom: none;
 }
 
-
 .rank {
   font-weight: bold;
   margin-right: 8px;
-  color: #6c63ff; 
+  color: #6c63ff;
 }
-
 
 .coin-img {
   width: 24px;
@@ -89,14 +86,12 @@
   margin: 0 10px;
 }
 
-
 .name {
   flex: 1;
   margin-left: 5px;
   font-weight: 500;
   color: #f1f1f1;
 }
-
 
 .price {
   font-weight: 600;
@@ -112,16 +107,52 @@
 }
 
 .change.positive {
-  color: #4caf50; 
+  color: #4caf50;
 }
 
 .change.negative {
-  color: #f44336; 
+  color: #f44336;
 }
 
+@media (max-width: 768px) {
+  .market_div {
+    flex-direction: column;
+    gap: 30px;
+  }
 
-.index {
-  display: flex;
-  flex-direction: column;
-  margin-left: 50px;
+  .market_24h{
+    width: 100%;
+    margin: 0;
+  }
+  .index {
+    width: 100%;
+  }
+
+  .market_text {
+    text-align: center;
+  }
+
+  .market_text h3 {
+    font-size: 1.5rem;
+  }
+
+  .market_text p {
+    font-size: 0.85rem;
+  }
+
+  .gainers,
+  .losers {
+    padding: 12px;
+  }
+
+  .gainers h3,
+  .losers h3 {
+    font-size: 1rem;
+  }
+
+  .gainers li,
+  .losers li {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
 }

@@ -78,3 +78,11 @@
   letter-spacing: 0.5px;
   color:white;   
 }
+
+@media (max-width: 768px) {
+  .fear-greed-card {
+    margin-left: 5px;    
+    margin-inline: 15px; 
+  }
+
+}

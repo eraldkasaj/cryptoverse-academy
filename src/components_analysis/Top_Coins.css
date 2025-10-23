@@ -73,3 +73,43 @@
   color: #e74c3c;
   font-weight: 600;
 }
+
+
+@media (max-width: 768px) {
+  .costum-card {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .costum-card h5 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .custom-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;      /* scroll horizontal */
+    white-space: nowrap;   /* mos i thyj kolonat */
+    border-radius: 12px;
+  }
+
+  .custom-table thead {
+    font-size: 0.85rem;
+  }
+
+  .custom-table td,
+  .custom-table th {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  .custom-table img {
+    width: 20px;
+    margin-right: 6px;
+  }
+
+  .custom-table tbody tr:hover {
+    background-color: #2f2f45;
+  }
+}
