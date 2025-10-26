@@ -8,11 +8,10 @@ const Crypto_Trading = () => {
     const cached = localStorage.getItem("cryptoCoins");
     const cachedTime = localStorage.getItem("cryptoCoinsTime");
 
-    const FOUR_HOURS = 1000 * 60 * 60 * 4; // 4 orë në ms
+    const FOUR_HOURS = 1000 * 60 * 60 * 4;
     const now = new Date().getTime();
 
     if (cached && cachedTime && now - cachedTime < FOUR_HOURS) {
-      // përdor të dhënat e cache
       setCoins(JSON.parse(cached));
     } else {
       const fetchCoins = async () => {
@@ -23,7 +22,6 @@ const Crypto_Trading = () => {
           const data = await res.json();
           setCoins(data);
 
-          // ruaj në localStorage bashkë me kohën
           localStorage.setItem("cryptoCoins", JSON.stringify(data));
           localStorage.setItem("cryptoCoinsTime", now.toString());
         } catch (err) {
@@ -48,7 +46,7 @@ const Crypto_Trading = () => {
               alt={coin.name}
               style={{ padding: "20px", height: "200px", objectFit: "contain" }}
             />
-            <div className="card-body bg-dark">
+            <div className="card-body">
               <h5 className="card-title">
                 {coin.name} ({coin.symbol.toUpperCase()})
               </h5>

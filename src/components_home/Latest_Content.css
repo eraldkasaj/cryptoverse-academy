@@ -1,6 +1,7 @@
 .Latest_Content {
   padding: 60px 20px;
-  background-color: var(--primary);
+  background-color: var(--bg-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .Content_Title {
@@ -8,7 +9,7 @@
   margin-left: 40px;
   font-size: 2.2rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-main);
   margin-bottom: 30px;
 }
 
@@ -20,8 +21,8 @@
 }
 
 .card {
-  flex: 0 0 20rem;
-  background: #1c1c1c;
+  flex: 0 0 22rem;
+  background: var(--bg-card);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -36,15 +37,24 @@
 }
 
 .card-img-top {
-  height: 200px;
-  object-fit: cover;
   width: 100%;
+  height: 260px;
+  object-fit: fill;
+  object-position: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: #0f0f1a;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
 }
 
 .card-body {
   padding: 20px;
-  background: #111;
-  color: #ddd;
+  background: var(--bg-card);
+  color: var(--text-main);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -54,7 +64,7 @@
 .card-title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-main);
   margin-bottom: 10px;
   white-space: nowrap;
   overflow: hidden;
@@ -65,7 +75,7 @@
   font-size: 0.9rem;
   line-height: 1.4;
   margin-bottom: 15px;
-  color: #bbb;
+  color: var(--text-secondary);
 }
 
 .btn {
@@ -75,14 +85,34 @@
   font-weight: 600;
   border-radius: 6px;
   border: none;
-  background-color: var(--secondary);
-  color: var(--white);
+  background-color: var(--primary);
+  color: #fff;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .btn:hover {
-  background-color: #fff;
-  color: var(--black);
+  background-color: color-mix(in srgb, var(--primary) 80%, black 20%);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .Content_Title {
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+
+  .Cards_Wrapper {
+    gap: 20px;
+  }
+
+  .card {
+    flex: 0 0 18rem;
+  }
+
+  .card-img-top {
+    height: 220px;
+  }
 }

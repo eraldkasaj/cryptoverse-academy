@@ -1,32 +1,31 @@
 .footer {
-  background: linear-gradient(135deg, #1a1a1d, #2c2c34);
-  color: #bbb;
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
   padding: 10px 30px;
   font-size: 0.95rem;
-  border-top: 4px solid #6a5acd;
+  border-top: 4px solid var(--primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Logo */
 .footer-logo {
   width: 120px;
   display: block;
   margin-bottom: 15px;
 }
 
-/* Social Section */
 .footer-social {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--text-secondary);
   padding-bottom: 10px;
   margin-bottom: 5px;
 }
 
 .footer-social span {
   font-weight: 500;
-  color: #fff;
+  color: var(--text-main);
 }
 
 .footer-social .icons {
@@ -41,18 +40,17 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: #2c2c34;
-  color: #a78bfa;
+  background-color: var(--bg-main);
+  color: var(--primary);
   font-size: 1.3rem;
   transition: all 0.3s ease;
 }
 
 .footer-social .icons a:hover {
-  background: #a78bfa;
-  color: #000;
+  background-color: var(--primary);
+  color: var(--bg-card);
 }
 
-/* Footer Grid */
 .footer-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -62,10 +60,9 @@
 .footer-links h6 {
   font-weight: bold;
   margin-bottom: 15px;
-  color: #fff;
+  color: var(--text-main);
 }
 
-/* Links and lists */
 .footer-links ul {
   list-style: none;
   padding: 0;
@@ -74,45 +71,59 @@
 
 .footer-links li {
   margin-bottom: 8px;
-  color: #bbb;
+  color: var(--text-secondary);
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .footer-links li:hover {
-  color: #fff;
+  color: var(--text-main);
 }
 
 .footer-links a {
   display: block;
-  color: #bbb;
+  color: var(--text-secondary);
   text-decoration: none;
   margin-bottom: 8px;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #fff;
+  color: var(--text-main);
 }
 
-/* Contact */
 .footer-links p {
   margin: 8px 0;
-  color: #bbb;
+  color: var(--text-secondary);
 }
 
 .footer-links p i {
   margin-right: 8px;
-  color: #a78bfa;
+  color: var(--primary);
 }
 
-/* Bottom Section */
 .footer-bottom {
   text-align: center;
   font-size: 0.85rem;
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--text-secondary);
   padding-top: 15px;
   margin-top: 5px;
-  color: #999;
+  color: var(--text-secondary);
   letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .footer-social {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto 15px auto;
+  }
 }

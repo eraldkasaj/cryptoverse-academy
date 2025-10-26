@@ -9,13 +9,11 @@ const Navbar = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const navigate = useNavigate();
 
-  // Seto temën kur ngarkohet faqja
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  // Kontrollo nëse user është loguar
   useEffect(() => {
     const loggedInStatus = localStorage.getItem("isLoggedIn");
     const loggedUser = localStorage.getItem("loggedInUser");
@@ -26,7 +24,6 @@ const Navbar = () => {
     }
   }, []);
 
-  // Funksioni për logout
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("loggedInUser");
@@ -35,7 +32,6 @@ const Navbar = () => {
     navigate("/");
   };
 
-  // Funksioni për ndryshimin e temës
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
@@ -62,14 +58,14 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav navbar-left">
             <li className="nav-item">
-              <Link className="nav-link text-white" to="/analysis">Analysis</Link>
+              <Link className="nav-link" to="/analysis">Analysis</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-white" to="/research">Research</Link>
+              <Link className="nav-link" to="/research">Research</Link>
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle text-white"
+                className="nav-link dropdown-toggle"
                 href="#"
                 id="navbarDropdownMenuLink"
                 role="button"
@@ -91,11 +87,11 @@ const Navbar = () => {
           <ul className="navbar-nav d-flex align-items-center">
             {isLoggedIn ? (
               <>
-                <li className="nav-item p-2 text-white d-flex align-items-center">
+                <li className="nav-item p-2 d-flex align-items-center">
                   <i className="bi bi-person-circle fs-5 me-1"></i> {userEmail}
                 </li>
                 <li className="nav-item p-2">
-                  <button className="btn btn-sm btn-outline-light" onClick={handleLogout}>
+                  <button className="btn custom-btn" onClick={handleLogout}>
                     Logout
                   </button>
                 </li>
@@ -103,19 +99,18 @@ const Navbar = () => {
             ) : (
               <>
                 <li className="nav-item">
-                  <Link className="nav-link text-white" to="/login">Log in</Link>
+                  <Link className="nav-link" to="/login">Log in</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white" to="/register">Register</Link>
+                  <Link className="nav-link" to="/register">Register</Link>
                 </li>
               </>
             )}
 
-            {/* Butoni për ndërrim teme */}
             <li className="nav-item p-2">
               <i
                 onClick={toggleTheme}
-                className={`bi ${theme === "light" ? "bi-moon" : "bi-brightness-high"} text-white fs-5`}
+                className={`bi ${theme === "light" ? "bi-moon" : "bi-brightness-high"} fs-5`}
                 style={{ cursor: "pointer", transition: "0.3s" }}
                 title={theme === "light" ? "Dark mode" : "Light mode"}
               ></i>

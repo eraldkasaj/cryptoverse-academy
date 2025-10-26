@@ -1,7 +1,7 @@
 import "../components_research/NFT_Metaverse.css";
-import NFT from '../assets/NFT.jpg'
-import Metaverse from '../assets/Metaverse.jpg'
-import Game from '../assets/Game.jpg'
+import NFT from '../assets/NFT.jpg';
+import Metaverse from '../assets/Metaverse.jpg';
+import Game from '../assets/Game.jpg';
 
 const NFT_Metaverse = () => {
   return (
@@ -9,7 +9,6 @@ const NFT_Metaverse = () => {
       <h2 className="section-title">🎨 NFTs and the Metaverse</h2>
       <div className="nft-metaverse-content">
 
-        {/* NFT Card */}
         <div className="nft-card">
           <img src={NFT} alt="NFT" />
           <h3>What are NFTs?</h3>
@@ -28,7 +27,6 @@ const NFT_Metaverse = () => {
           </a>
         </div>
 
-        {/* Metaverse Card */}
         <div className="nft-card">
           <img src={Metaverse} alt="Metaverse" />
           <h3>The Metaverse</h3>
@@ -47,7 +45,6 @@ const NFT_Metaverse = () => {
           </a>
         </div>
 
-        {/* Use Cases Card */}
         <div className="nft-card">
           <img src={Game} alt="Use Cases" />
           <h3>Real Use Cases</h3>

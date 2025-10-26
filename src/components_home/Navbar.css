@@ -1,6 +1,9 @@
 .custom-navbar {
-  background-color: var(--bg-main);
+  background-color: var(--bg-card);
+  color: var(--text-main);
   padding: 10px 20px;
+  border-bottom: 3px solid var(--primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar-brand img {
@@ -8,31 +11,74 @@
   border-radius: 6px;
 }
 
+.navbar-nav .nav-link {
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary);
+}
+
 .nav-item {
   margin-right: 10px;
-}
-.nav-item:hover {
-  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 40px;
+  padding: 4px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .navbar-toggler {
   border: none;
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 5px 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 6px 9px;
   border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  background-color: var(--primary);
 }
 
 .navbar-toggler-icon {
   filter: invert(1);
 }
 
+.custom-btn {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: color-mix(in srgb, var(--primary) 80%, black 20%);
+}
+
+.nav-item i {
+  color: var(--text-main);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-item i:hover {
+  color: var(--primary);
+}
+
 @media (max-width: 768px) {
   .navbar-collapse {
-    background-color: var(--primary);
+    background-color: var(--bg-card);
     padding: 20px 0;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
   }
 
   .navbar-nav {
@@ -47,11 +93,7 @@
     justify-content: center;
   }
 
-  .navbar-right .nav-item {
-    margin: 5px 0;
-  }
-
-  .navbar-right .btn {
+  .custom-btn {
     width: 80%;
   }
 

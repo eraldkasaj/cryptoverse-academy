@@ -59,25 +59,47 @@ const Bitcoin_Cap = () => {
       {
         label: "Bitcoin Price (USD)",
         data: dataPoints.map((p) => p.close),
-        borderColor:"#735ee2",
-        backgroundColor:"white",
+        borderColor: getComputedStyle(document.body).getPropertyValue("--primary").trim(),
+        backgroundColor: getComputedStyle(document.body).getPropertyValue("--primary").trim() + "33",
         fill: true,
-        tension: 0.2,
+        tension: 0.3,
+        pointBackgroundColor: getComputedStyle(document.body).getPropertyValue("--primary").trim(),
+        pointBorderWidth: 1.5,
       },
     ],
-  }
+  };
 
- const options = {
-  responsive: true,
-  plugins: { 
-    legend: { labels: { color: "#f5f5f5" } }   
-  },
-  scales: {
-    x: { ticks: { maxTicksLimit: 6, color: "#ddd" }, grid: { color: "#333" } },
-    y: { beginAtZero: false, ticks: { color: "#ddd" }, grid: { color: "#333" } },
-  },
-};
-
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        labels: {
+          color: getComputedStyle(document.body).getPropertyValue("--text-main").trim(),
+          font: { size: 14 },
+        },
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          maxTicksLimit: 6,
+          color: getComputedStyle(document.body).getPropertyValue("--text-secondary").trim(),
+        },
+        grid: {
+          color: getComputedStyle(document.body).getPropertyValue("--bg-card").trim() + "55",
+        },
+      },
+      y: {
+        beginAtZero: false,
+        ticks: {
+          color: getComputedStyle(document.body).getPropertyValue("--text-secondary").trim(),
+        },
+        grid: {
+          color: getComputedStyle(document.body).getPropertyValue("--bg-card").trim() + "55",
+        },
+      },
+    },
+  };
 
   return (
     <div className="market-overview">
@@ -91,14 +113,12 @@ const Bitcoin_Cap = () => {
             </span>
           </p>
         </div>
-
         <div className="custom-card">
           <h4>BTC High/Low </h4>
           <p className="mt-4 fw-bold"><span className="text-success">High</span>: ${parseFloat(btcStats.highPrice).toLocaleString()}</p>
           <p className="mt-4 fw-bold"><span className="text-danger">Low</span>: ${parseFloat(btcStats.lowPrice).toLocaleString()}</p>
         </div>
       </div>
-
       <div className="Btc_chart p-3">
         <h5>Bitcoin Market Chart</h5>
         <Line data={chartData} options={options} />

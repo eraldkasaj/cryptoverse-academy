@@ -8,11 +8,11 @@ const Latest_Content = () => {
     const cached = localStorage.getItem("latestNews");
     const cachedTime = localStorage.getItem("latestNewsTime");
 
-    const FOUR_HOURS = 1000 * 60 * 60 * 4; // 4 orë në ms
+    const FOUR_HOURS = 1000 * 60 * 60 * 4; 
     const now = new Date().getTime();
 
     if (cached && cachedTime && now - cachedTime < FOUR_HOURS) {
-      // përdor lajmet nga cache
+     
       setNews(JSON.parse(cached));
     } else {
       const fetchNews = async () => {
@@ -25,7 +25,6 @@ const Latest_Content = () => {
 
           setNews(sliced);
 
-          // ruaj të dhënat dhe kohën
           localStorage.setItem("latestNews", JSON.stringify(sliced));
           localStorage.setItem("latestNewsTime", now.toString());
         } catch (err) {
@@ -49,7 +48,7 @@ const Latest_Content = () => {
               className="card-img-top"
               alt={item.title}
             />
-            <div className="card-body bg-dark">
+            <div className="card-body">
               <h5 className="card-title">{item.title}</h5>
               <p className="card-text">{item.body.slice(0, 100)}...</p>
               <a

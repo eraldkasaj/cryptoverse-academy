@@ -7,8 +7,8 @@ const Top_Picks_News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-          const res = await fetch(
-          "https://gnews.io/api/v4/top-headlines?category=business&lang=en&country=el&apikey=92ec6233f20723856be2c46116b84733"  
+        const res = await fetch(
+          "https://gnews.io/api/v4/top-headlines?category=business&lang=en&country=us&apikey=92ec6233f20723856be2c46116b84733"
         );
         const json = await res.json();
         setNews(json.articles || []);
@@ -33,14 +33,14 @@ const Top_Picks_News = () => {
               <h5>{article.title}</h5>
             </a>
             <p>{article.description}</p>
-           <small>
-            {article.source?.name} —{" "}
-            {new Date(article.publishedAt).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "short",
-              day: "numeric",
-            })}
-          </small>
+            <small>
+              {article.source?.name} —{" "}
+              {new Date(article.publishedAt).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}
+            </small>
           </div>
         ))}
       </div>

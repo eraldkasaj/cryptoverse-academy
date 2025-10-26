@@ -5,7 +5,7 @@ const Deep_Dives = () => {
     <section className="tokenomics container">
       <header className="tok-header">
         <h2>🔎 Deep Dive: Tokenomics / Coin Economy</h2>
-        <p className="tok-sub text-light">
+        <p className="tok-sub">
           How tokens are distributed, how inflation/deflation affects them, 
           and why real utility within the ecosystem is key for long-term value.
         </p>
@@ -76,7 +76,6 @@ const Deep_Dives = () => {
           </div>
         </article>
 
-     
         <article className="tok-card">
           <div className="tok-illustration">
             <svg viewBox="0 0 240 160" className="svg-illu" aria-hidden="true">
